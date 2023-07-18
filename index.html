@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimal Weather</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+      
+    <div class="container">
+      
+
+    <h1>Minimal Weather</h1>    
+
+    </div>
+
+
+<style>
+
+  /* Style for the animated element */
+  .animated-element {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 2s ease-out, transform 2s ease-out;
+   
+  }
+  
+  /* Style for the animated element when it's in view */
+  .animated-element.animated {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Style the image */
+  .animated-element img {
+    border-radius: 10px;
+    width: 100%;
+    margin-bottom: 1000px;
+
+  }
+.animated-element h2 {
+  margin-bottom: 700px;
+  margin-left: 30%;
+  color: whitesmoke;
+  font-size: 68px;
+   text-shadow: 5px 5px 5px grey;
+}
+
+.animated-element h3 {
+ 
+  margin-left: 30%;
+  color: whitesmoke;
+  font-size: 68px;
+   text-shadow: 5px 5px 5px grey;
+
+}
+
+
+.animated-element button {
+  margin-left: 36%;
+  color: whitesmoke;
+  background-color: black;
+  border-radius: 10px;
+  font-size: 48px;
+
+
+}
+
+
+  .animated-element:first-child {
+  margin-bottom: 100px;
+ } 
+
+
+</style>
+
+
+
+
+<div class="container">
+
+  
+  <div class="animated-element"><img src="E098B077-7D6C-40FB-B6A3-3F2F04965C66.jpeg" alt="image of apps ui 2"></div>
+
+  <br><br><br><br>
+
+
+  <div class="animated-element"> <h2>Most minimal and elegant weather experiance</h2> 
+  
+  </div>
+
+  <div class="animated-element"><img src="EAB88F5B-E325-439B-88AE-6031004D1D8A.jpeg" alt=""></div>
+
+<div>
+
+  <div class="animated-element"> <h2>And always accurate weather information </h2> 
+    <div class="animated-element"> <h3>packed into single package </h3> 
+   
+
+      <br><br><br><br><br><br>
+
+    <!--  <div class="animated-element"> <video autoplay src="Elokuvani.mp4"></video> -->
+
+      <div class="animated-element"> <a href="https://apps.apple.com/us/app/minimalweather/id6448237039">
+        <button style= "background-color: black; color: white">download the app</button>
+      </a>
+
+      <br><br><br><br><br><br> <br><br><br><br><br><br>
+
+    
+
+
+</div>
+  
+
+<script>
+  const elements = document.querySelectorAll(".animated-element");
+  const windowHeight = window.innerHeight;
+
+  function checkScroll() {
+    for (let i = 0; i < elements.length; i++) {
+      let element = elements[i];
+      let positionFromTop = elements[i].getBoundingClientRect().top;
+
+      if (positionFromTop - windowHeight <= 0) {
+        element.classList.add("animated");
+      }
+    }
+  }
+
+  window.addEventListener("scroll", checkScroll);
+</script>
+
+<script>
+
+  var myvid = $('#Elokuvani.mp4')[0];
+  $(window).scroll(function(){
+    var scroll = $(this).scrollTop();
+    scroll > 70 ? myvid.pause() : myvid.play()
+  })
+
+</script>
+
+
+  </div>
+
+</body>
+</html>
