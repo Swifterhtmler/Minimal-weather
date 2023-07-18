@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../Git-rep/minimal weather/node_modules"
+		}
+	],
+	"settings": {}
+}
